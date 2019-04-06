@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# this will make execution of bash scripts safer. For more info visit
+# https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -eu -o pipefail
 
 # Allow user overrides to $MAKE. Typical usage for users who need it:
