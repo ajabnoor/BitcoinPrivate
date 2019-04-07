@@ -6,7 +6,7 @@ set -eu -o pipefail
 
 # Allow user overrides to $MAKE. Typical usage for users who need it:
 #   MAKE=gmake ./btcputil/build.sh -j$(nproc)
-# assign default value to override see this https://wiki.bash-hackers.org/syntax/pe#use_a_default_value
+# assign default value to override after the (-). See this https://wiki.bash-hackers.org/syntax/pe#use_a_default_value
 if [[ -z "${MAKE-}" ]]; then
     MAKE=make
 fi
