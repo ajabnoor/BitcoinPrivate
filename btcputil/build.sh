@@ -28,6 +28,9 @@ if [[ -z "${CXX-}" ]]; then
     CXX=g++
 fi
 
+# By putting x on both sides it's the same as just comparing the variables directly 
+# but the two sides will always be non-empty. see this 
+# https://stackoverflow.com/questions/1805663/shell-script-purpose-of-x-in-xvariable/
 if [ "x$*" = 'x--help' ]
 then
     cat <<EOF
