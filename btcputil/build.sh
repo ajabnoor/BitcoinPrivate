@@ -33,6 +33,8 @@ fi
 # https://stackoverflow.com/questions/1805663/shell-script-purpose-of-x-in-xvariable/
 if [ "x$*" = 'x--help' ]
 then
+
+# diplay help on the screen
     cat <<EOF
 Usage:
 
@@ -63,7 +65,12 @@ EOF
     exit 0
 fi
 
+# The -x option causes bash to print each command before executing it.
 set -x
+
+# 
+# dir="/from/here/to/there.txt"
+# dir="$(dirname $dir)"   # Returns "/from/hear/to"
 cd "$(dirname "$(readlink -f "$0")")/.."
 
 # If --enable-lcov is the first argument, enable lcov coverage support:
