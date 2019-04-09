@@ -26,7 +26,7 @@ Build:
 # Checkout
 git clone https://github.com/BTCPrivate/BitcoinPrivate.git
 cd BitcoinPrivate
-# Build
+# Build with passing the no. of CPUs
 ./btcputil/build.sh -j$(nproc)
 # Fetch Zcash ceremony keys
 ./btcputil/fetch-params.sh
