@@ -68,9 +68,10 @@ fi
 # The -x option causes bash to print each command before executing it.
 set -x
 
-# 
-# dir="/from/here/to/there.txt"
-# dir="$(dirname $dir)"   # Returns "/from/hear/to"
+# return to the absolute path of BitcoinPrivate Directory ==>
+# readlink -f "$0" converts current relative path to absolute paths with bash at the end /home/xxxxx/BitcoinPrivate/btcutil/build.sh
+# dir="$(dirname $dir)"   # Returns "/home/xxxxx/BitcoinPrivate/btcutil/"
+# then /..
 cd "$(dirname "$(readlink -f "$0")")/.."
 
 # If --enable-lcov is the first argument, enable lcov coverage support:
